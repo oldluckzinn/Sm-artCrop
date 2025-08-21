@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ dados.nome }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>{{ dados.nome }}</h1>
+    <p><strong>Descrição:</strong> {{ dados.descricao }}</p>
+    <h2>Benefícios</h2>
+    <ul>
+        {% for beneficio in dados.beneficios %}
+            <li>{{ beneficio }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar</a>
+</body>
+</html>
